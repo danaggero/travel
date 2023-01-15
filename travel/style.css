@@ -1,0 +1,30 @@
+.title {
+    border-bottom: solid #abced4 2px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+/* 
+*{
+    border: black 1px solid;
+} */
+.img {
+    width: 600px;
+    height: 300px;
+
+}
+
+.first {
+    /* margin-left: 60px; */
+    padding-left: 40px;
+}
+.second {
+    /* margin-left: 60px; */
+    padding-left: 40px;
+}
+.third {
+    /* margin-left: 60px; */
+    padding-left: 40px;
+}
+

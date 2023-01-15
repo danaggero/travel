@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 여행일지</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c41b85473b.js" crossorigin="anonymous"></script>
+
+</head>
+<body style="background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;">
+    
+    <div id="wrap">
+        <div class="title">
+            <h2>나의 여행일지</h2>
+            <div id="subtitle">
+                <h6>Date: Nov 11th - 13th</h6>
+            </div>
+        </div>
+        <div class="first">
+            <h4 class="subtitle">1st.</h4>
+            <button onclick="getWeather()">날씨 가져오기</button>
+            <ul>
+                <li>
+                    <h2>4:00pm</h2>
+                    <h3>제주 호텔 더 원</h3>
+                    <img class=img src="https://pix8.agoda.net/hotelImages/106/1060651/1060651_16120514340049442848.jpg?ca=6&ce=1&s=1024x768">
+                </li>
+                <li>
+                    <h2>4:30pm</h2>
+                    <h3>저녁</h3>
+                </li>
+                <li>
+                    <h2>6:00pm</h2>
+                    <h3>이호테우 해변</h3>
+                    <img class=img src="data:image/jpeg;base64,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">
+                </li>
+            </ul>
+        </div>
+        <div class="second" id="sec">
+            <h4 class="subtitle">2nd.</h4>
+            <ul id="secid">
+                <li>
+                    <h2>9:00am</h2>
+                    <h3>제주 동쪽 버스 투어</h3>
+                </li>
+                <li>
+                    <h2>9:50am</h2>
+                    <h3>함덕 해수욕장</h3>
+                    <img class='img' src="https://api.cdn.visitjeju.net/photomng/imgpath/201908/29/6fa8ac92-91b1-4314-a05e-0c962f9ab2f8.jpg">
+                </li>
+                <li>
+                    <h2>11:20am</h2>
+                    <h3>비자림</h3>
+                </li>
+                <li>
+                    <h2>12:40pm</h2>
+                    <h3>성산일출봉</h3>
+                </li>
+                <li>
+                    <h2>2:30pm</h2>
+                    <h3>섭지코지</h3>
+                </li>
+                <li>
+                    <h2>3:55pm</h2>
+                    <h3>제주 허브 동산</h3>
+                </li>
+            </ul>
+        </div>
+        <div class="third">
+            <h4 class="subtitle">3rd.</h4>
+            <ul>
+                <li>
+                    <h2>8:30am</h2>
+                    <h3>아침</h3>
+                </li>
+                <li>
+                    <h2>10:00am</h2>
+                    <h3>천왕사</h3>
+                </li>
+                <li>
+                    <h2>12:00pm</h2>
+                    <h3>점심</h3>
+                </li>
+                <li>
+                    <h2>2:00pm</h2>
+                    <h3>카페</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function getWeather() {
+            fetch('https://api.openweathermap.org/data/2.5/weather?lat=33&lon=126&appid=e35e771d2195c4692df1230794218e2a')
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById("temperature").innerHTML = data['main']
+            });
+        }
+    </script>
+</body>
+</html>
